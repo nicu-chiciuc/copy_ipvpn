@@ -1,0 +1,150 @@
+* {
+    font-family: SFUIText, Helvetica, Ubuntu, Arial, sans-serif !important;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 415px;
+    overflow: hidden;
+    width: 255px;
+    background: white;
+}
+
+.login-content {
+    width: 195px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.logo {
+    width: 115px; height: 35px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 23px;
+}
+
+.login-content .input-text{
+    width: 100%;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 7px;
+    margin-bottom: 23px;
+    box-sizing: border-box;
+    border: inset;
+    border-radius: 20px;
+	outline-width: 0;
+}
+
+.login-content .login-button {
+    background: #80af00;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 13px;
+    color:#fff;
+    border: none;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 29px;
+    cursor:pointer;
+}
+
+.login-content .forgot-your-password {
+    color: black;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 19px;
+}
+
+.login-content .registration-text {
+    color: black;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+}
+
+.login-content .registration-text a{
+    text-decoration: underline;
+    color: #84BF41;
+}
+
+.main-window {width: 100%; height: 100%; display: none;}
+.main-window .top-panel {width: 100%; height: 60px; position: relative; padding-top: 8px; box-sizing: border-box;border-bottom:1px solid #19232d;background-color: #84BF41;}
+.main-window .middle-panel {width: 100%; height: 255px; background: white; overflow-y: auto;border-bottom:1px solid #19232d; scrollbar-color: #131c24 transparent; }
+.main-window .middle-panel::-webkit-scrollbar {width: 6px; margin-right: 3px;}
+.main-window .middle-panel::-webkit-scrollbar-thumb {background: #CBD4DD; border-radius: 10px;}
+.main-window .middle-panel::-webkit-scrollbar-track {background: transparent;}
+.main-window .bottom-panel {width: 100%; height: 100px; background-color: #84BF41;}
+
+.main-window .top-panel img {width: 110px; display: block; margin: 0 auto;}
+.main-window .top-panel .menu {position: absolute; right: 10px; top: 18px; width: 25px; height: 25px; cursor: pointer; background: url(../img/menu.png) center no-repeat; background-size: auto 15px;}
+.main-window .top-panel .settings {background: #fff; padding: 10px 30px 10px 20px; font-size: 12px; color: #000; position: absolute; right: 10px; top: 45px; display: none;}
+.main-window .top-panel .settings.active {display: block;}
+.main-window .top-panel .settings a {color: #000; text-decoration: none;}
+.main-window .top-panel .settings ul {padding: 0; list-style: none; margin: 0;}
+.main-window .top-panel .settings ul li {padding: 9px 2px;}
+
+.main-window .bottom-panel p{color:white;font-size:11px;text-align:center;margin-bottom:17px;margin-top:0px;padding-top: 25px;}
+.main-window .bottom-panel .application-list {text-align: center;}
+.main-window .bottom-panel .app-icon{display:inline-block;width:18px;height:18px;cursor:pointer;margin:0 10px;}
+.main-window .bottom-panel .windows-icon {background:url(../img/icons/windows.png) center no-repeat;}
+.main-window .bottom-panel .mac-icon {background:url(../img/icons/macos.png) center no-repeat;}
+.main-window .bottom-panel .ios-icon {background:url(../img/icons/ios.png) center no-repeat;}
+.main-window .bottom-panel .android-icon {background:url(../img/icons/android.png) center no-repeat;}
+.main-window .bottom-panel .amazon-icon {background:url(../img/icons/amazon.png) center no-repeat;}
+
+.main-window .middle-panel ul {padding: 0; list-style: none; margin: 0;}
+.main-window .middle-panel ul li {font-size:12px;color:black;line-height:16px;border-bottom:1px #45515d solid;padding:10px 5px 10px 28px;background: url(../img/checkbox/checkbox-unchecked.png) left 8px top 12px no-repeat;cursor:pointer;}
+.main-window .middle-panel ul li:last-child{border-bottom:0}
+.main-window .middle-panel ul li:hover{background:#84BF41 url(../img/checkbox/checkbox-unchecked.png) left 8px top 12px no-repeat; opacity: 0.3;}
+.main-window .middle-panel ul li span {display: block;}
+.main-window .middle-panel ul li.active{background:url(../img/checkbox/checkbox-checked.png) left 8px top 12px no-repeat;}
+.main-window .middle-panel ul li.active:hover{background:#84BF41 url(../img/checkbox/checkbox-checked.png) left 8px top 12px no-repeat; opacity: 0.3;}
+.main-window .middle-panel ul li.disabled span{padding-left:0;}
+.main-window .middle-panel ul li span{padding-left:33px;background-position:left center;background-repeat:no-repeat;}
+.main-window .middle-panel ul li:first-child span{padding-left:0;}
+.main-window .middle-panel ul li.flag-us span{background-image:url(../img/flags/usa.png)}
+.main-window .middle-panel ul li.flag-uk span{background-image:url(../img/flags/uk.png)}
+.main-window .middle-panel ul li.flag-ro span{background-image:url(../img/flags/ro.png)}
+.main-window .middle-panel ul li.flag-au span{background-image:url(../img/flags/au.png)}
+.main-window .middle-panel ul li.flag-ca span{background-image:url(../img/flags/ca.png)}
+.main-window .middle-panel ul li.flag-ch span{background-image:url(../img/flags/ch.png)}
+.main-window .middle-panel ul li.flag-de span{background-image:url(../img/flags/de.png)}
+.main-window .middle-panel ul li.flag-fr span{background-image:url(../img/flags/fr.png)}
+.main-window .middle-panel ul li.flag-jp span{background-image:url(../img/flags/jp.png)}
+.main-window .middle-panel ul li.flag-kr span{background-image:url(../img/flags/kr.png)}
+.main-window .middle-panel ul li.flag-nl span{background-image:url(../img/flags/nl.png)}
+.main-window .middle-panel ul li.flag-pl span{background-image:url(../img/flags/pl.png)}
+.main-window .middle-panel ul li.flag-sg span{background-image:url(../img/flags/sg.png)}
+.main-window .middle-panel ul li.flag-es span{background-image:url(../img/flags/es.png)}
+.main-window .middle-panel ul li.flag-lv span{background-image:url(../img/flags/lv.png)}
+.main-window .middle-panel ul li.flag-in span{background-image:url(../img/flags/in.png)}
+.main-window .middle-panel ul li.flag-it span{background-image:url(../img/flags/it.png)}
+.main-window .middle-panel ul li.flag-mg span{background-image:url(../img/flags/mg.png)}
+.main-window .middle-panel ul li.flag-mx span{background-image:url(../img/flags/mx.png)}
+.main-window .middle-panel ul li.flag-my span{background-image:url(../img/flags/my.png)}
+.main-window .middle-panel ul li.flag-se span{background-image:url(../img/flags/se.png)}
+.main-window .middle-panel ul li.flag-sw span{background-image:url(../img/flags/sw.png)}
+.main-window .middle-panel ul li.flag-uy span{background-image:url(../img/flags/uy.png)}
+.main-window .middle-panel ul li.flag-ru span{background-image:url(../img/flags/ru.png)}
+.main-window .middle-panel ul li.flag-br span{background-image:url(../img/flags/br.png)}
+.main-window .middle-panel ul li.flag-pt span{background-image:url(../img/flags/pt.png)}
+.main-window .middle-panel ul li.flag-lu span{background-image:url(../img/flags/lu.png)}
+.main-window .middle-panel ul li.flag-lt span{background-image:url(../img/flags/lt.png)}
+
+.settings-window {display: none; width: 100%; height: 100%;background:white;}
+.settings-window .top-panel {background:#84BF41;font-size: 14px; color: #fff; font-weight: normal; text-align: center; margin: 0; padding-top: 11px;border-bottom:1px solid #19232d;}
+.settings-window .top-panel {width: 100%; position: relative; height: 41px; box-sizing: border-box;}
+.settings-window .top-panel .back {cursor: pointer; background: url(../img/back.png) center no-repeat; width: 18px; height: 30px; background-size: 9px 15px; position: absolute; left: 10px; top: 3px;}
+.settings-window .top-panel h3 {font-size:14px;color:white; margin: 0; font-weight: normal;}
+.settings-window .settings-panel {background: white;}
+.settings-window .settings-panel ul {padding: 0; list-style: none; margin: 0;}
+.settings-window .settings-panel li {font-size: 12px; line-height: 16px; box-sizing: border-box; height: 40px; padding: 10px; border-bottom: 1px #45515d solid;}
+.settings-window .settings-panel li .setting-name {float:left;font-size:12px;line-height:20px;color:black;}
+.settings-window .settings-panel li .setting-value {float: right; line-height: 20px;}

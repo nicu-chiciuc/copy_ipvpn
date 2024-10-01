@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/insert_font.js"></script>
+</head>
+<body>
+
+    <div class="login-content" style="display: none; padding-top: 15px;">
+        <img  style="padding: 20px; padding-bottom: 23px;" src="img/logo-retina3.svg">
+        <form id="login-form">
+            <input type="text" class="input-text" id="username" placeholder="Username">
+            <input type="password" class="input-text" id="password" placeholder="Password">
+            <button class="login-button">Sign In</button>
+            <a class="forgot-your-password" target="_blank" href="https://billing.hideipvpn.com/clientarea.php">Forgot your password?</a>
+            <p class="registration-text">Don’t have an account? <a target="_blank" href="https://www.hideipvpn.com/free-vpn/">Join now</a></p>
+        </form>
+    </div>
+    <div class="main-window">
+        <div class="top-panel">
+            <img src="img/logo-small.png">
+            <div class="menu"></div>
+            <div class="settings">
+                <ul>
+                    <li><a id="show-settings" href="#">Settings</a></li>
+                    <li><a target="_blank" href="https://billing.hideipvpn.com/clientarea.php">My Account</a></li>
+                    <li><a target="_blank" href="https://www.hideipvpn.com/support/">Support</a></li>
+                    <li><a target="_blank" href="https://www.hideipvpn.com/terms-of-service/">Terms of Service</a></li>
+                    <li><a id="signout" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle-panel">
+            <ul></ul>
+        </div>
+        <div class="bottom-panel">
+			<p>Try HideIPVPN on other devices</p>
+            <div class="application-list">
+                <a class="app-icon windows-icon" target="_blank" href="https://www.hideipvpn.com/setup/hideipvpn-windows-vpn-and-smart-dns-software-v5/"></a>
+                <a class="app-icon mac-icon" target="_blank" href="https://www.hideipvpn.com/setup/hideipvpn-macos-x-vpn-smart-dns-software-v5/"></a>
+                <a class="app-icon ios-icon" target="_blank" href="https://apps.apple.com/us/app/hideipvpn/id964479810"></a>
+                <a class="app-icon android-icon" target="_blank" href="https://play.google.com/store/apps/details?id=hideIPVPN.app"></a>
+            </div>
+			
+        </div>
+    </div>
+    <div class="settings-window">
+        <div class="top-panel">
+            <div id="settings-back-button" class="back"></div>
+            <h3>Settings</h3>
+        </div>
+        <div class="settings-panel">
+            <ul>
+                <li><div class="setting-name">Protocol</div><div class="setting-value"><select id="proto-selector">
+                    <option value="http">HTTP/S</option>
+                    <option value="socks5">SOCKS5</option>
+                </select></div></li>
+                <li><div class="setting-name">Port</div><div class="setting-value"><select id="port-selector">
+                    <option data-proto="http" value="3129">3129</option>
+                    <option data-proto="http" value="8080">8080</option>
+                    <option data-proto="http" value="81">81</option>
+                    <option data-proto="socks5" value="1080">1080</option>
+                </select></div></li>
+                <li><div class="setting-name">Prevent WebRTC leak</div><div class="setting-value"><input id="webrtc-check" type="checkbox"></div></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body></html>

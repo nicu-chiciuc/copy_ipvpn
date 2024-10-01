@@ -1,0 +1,39 @@
+{
+   "action": {
+      "default_icon": "icons/icon19.png",
+      "default_popup": "src/browser_action/browser_action.html",
+      "default_title": "HideIPVPN"
+   },
+   "background": {
+      "service_worker": "src/bg/background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "src/browser_action/js/jquery-3.3.1.min.js", "src/browser_action/js/app.js", "src/browser_action/js/insert_font.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+   },
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "ruleset_1",
+         "path": "rules.json"
+      } ]
+   },
+   "description": "Hide your IP address and bypass blocks and restrictions",
+   "homepage_url": "https://www.hideipvpn.com",
+   "host_permissions": [ "\u003Call_urls>", "https://api1.sstpcon.com/", "https://www.hideipvpn.com/" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "19": "icons/icon19-active.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgT/GX/Tfpp14duxKPvulHi7q4ejBmty4VYiTbDTzei1HiIp+OM6iCC1K3d9KNY/68a8pxHN61HjdzO+kW151Q+4EVxLULn1RMNFNefxOhwwljafVVfo9ThyPbP1szwdRfNeIsqMStdVosnXInU5x34P6bJtYzusTpYKYkno+VI+OQttRlTSVO1hsEKA6I/ZE3w/huXPXcjlq09Jfbl5oLudHcluCFYMp24E+vU/PBmdg/hPUvKSCRTFhwTA11HUzgjya/bna/EU128i36s1gmArN4znh3kkalXSjb/4wQFZp80Nz1wXI/j07mNdQA/qFOh7GDoBVccD7xGZuSXESfwIDAQAB",
+   "manifest_version": 3,
+   "name": "HideIPVPN - VPN and Smart DNS services",
+   "permissions": [ "webRequest", "webRequestAuthProvider", "declarativeNetRequest", "storage", "proxy", "notifications", "privacy" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}
