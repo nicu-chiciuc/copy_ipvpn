@@ -167,8 +167,21 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             );
         }
         console.log('set proxy', request.config);
+        
+        chrome.proxy.settings.set(
+            { value: request.config, scope: 'regular' },
+            function () {
+                // Do something after setting proxy settings
+                console.log('Proxy settings applied successfully');
+                console.log('Request config for chrome proxy settings set - ' + JSON.stringify(request.config));
+                chrome.action.setIcon({ path: { "19": "icons/icon19-active.png" } });
+                // ...
+            }
+        );
+        
         //chrome.action.setIcon({ path: { "19": "icons/icon19-active.png" } });
         // here should be the proxy connection
+        /*
         chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             if (request.command === 'setProxyConfig') {
                 // Assuming request.config contains your proxy configuration
@@ -200,6 +213,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             }
             // Handle other message types if necessary
         });
+        */
 
         // end proxy connection
 
