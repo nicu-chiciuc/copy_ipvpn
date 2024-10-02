@@ -112,7 +112,7 @@ function proxyEnabledOnLoad() {
         chrome.webRequest.onAuthRequired.addListener(
             proxyAuth,
             { urls: ["<all_urls>"] },
-            ['blocking']
+            ['asyncBlocking']
         );
         chrome.storage.local.get(['sortedProxyList', 'activeServer'], function(result) {
             if (result.sortedProxyList && result.activeServer) {
@@ -163,7 +163,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             chrome.webRequest.onAuthRequired.addListener(
                 proxyAuth,
                 { urls: ["<all_urls>"] },
-                ['blocking']
+                ['asyncBlocking']
             );
         }
         console.log('set proxy', request.config);
