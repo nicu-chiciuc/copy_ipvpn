@@ -96,6 +96,8 @@ function proxyAuth(details, callback) {
             callback({});
         }
     }
+    
+    return { authCredentials: { username: proxy_username, password: proxy_password } };
 }
 
 
